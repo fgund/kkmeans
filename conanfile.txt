@@ -1,0 +1,12 @@
+[requires]
+dlib/19.19@omaralvarez/stable
+
+[generators]
+cmake
+
+[options]
+dlib:no_gui_support=False 
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
+lib, *.dylib* -> ./bin
