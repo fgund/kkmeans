@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.2)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake) 
 conan_basic_setup(TARGETS)
 
-project(clustern)
+project(kkmeans)
 add_executable(${PROJECT_NAME} main.cpp)
 
 set_target_properties(
@@ -31,7 +31,7 @@ if (MSVC)
   set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/)
 endif()
 message("CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 
 if (MSVC)
     set(CPACK_GENERATOR NSIS)
@@ -39,7 +39,7 @@ else ()
     set(CPACK_GENERATOR DEB)
 endif()
 
-set(CPACK_PACKAGE_NAME "clustern")
+set(CPACK_PACKAGE_NAME "kkmeans")
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${CMAKE_PROJECT_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${CMAKE_PROJECT_VERSION_MINOR}")
