@@ -10,3 +10,4 @@ dlib:no_gui_support=False
 [imports]
 bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
 lib, *.dylib* -> ./bin
+lib, *.so* -> ./lib
